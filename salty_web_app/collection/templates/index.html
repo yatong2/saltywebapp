@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}
+    Homepage - {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+   <div class="dropdown">
+     <button class="dropbtn">Models</button>
+     <div class="dropdown-content"> 
+       {% for statsmodel in statsmodels %}
+          <a href="{% url 'statsmodel_detail' slug=statsmodel.slug %}">
+             {{ statsmodel.name }}
+          </a>
+       {% endfor %}
+     </div>
+   </div>
+{% endblock content %}
