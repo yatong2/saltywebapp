@@ -7,11 +7,9 @@
    <div class="dropdown">
      <button class="dropbtn">Models</button>
      <div class="dropdown-content"> 
-       {% for statsmodel in statsmodels %}
-          <a href="{% url 'statsmodel_detail' slug=statsmodel.slug %}">
-             {{ statsmodel.name }}
-          </a>
-       {% endfor %}
+       <a href="{% url 'ann' %}">Artificial Neural Network</a>
+       <a href="{% url 'lasso' %}">LASSO Lars</a>
+       <a href="{% url 'svr' %}">Support Vector Regression</a>
      </div>
    </div>
 {% endblock content %}
